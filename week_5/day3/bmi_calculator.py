@@ -1,3 +1,5 @@
+# Credit to Faith for bringing this application to class
+
 import numpy as np
 
 # Creating 2 arrays with family members height and weight
