@@ -28,7 +28,7 @@ def connect_to_s3(aws_access_key_id, aws_secret_access_key):
 
 
 def df_to_s3(df, key, s3_bucket, aws_access_key_id, aws_secret_access_key):
-    """Function that writes a data frame as a .csv file to an s3 bucket"""
+    """Function that writes a data frame as a .csv file to a s3 bucket"""
 
     csv_buffer = StringIO()  # create buffer to temporarily store the Data Frame
 
