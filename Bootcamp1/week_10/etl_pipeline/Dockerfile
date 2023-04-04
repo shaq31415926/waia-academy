@@ -12,4 +12,4 @@ WORKDIR /app
 COPY . /app
 
 # tell Docker the command to run inside the container
-CMD ["python", "./main.py"]
+CMD ["python3", "./main.py"]

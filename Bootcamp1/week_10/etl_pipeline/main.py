@@ -6,9 +6,9 @@ from src.load_data_to_s3 import df_to_s3
 
 from datetime import datetime
 
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
-load_dotenv()  # only for local testing
+#load_dotenv()  # only for local testing
 
 # import variables from .env file
 dbname = os.getenv("dbname")
@@ -35,7 +35,7 @@ def main():
     # fix the invoice date
     print("Transforming data - fixing date time")
     ot_data_final = ot_data_cleaned.copy()
-    ot_data_final['invoice_date'] = pd.to_datetime(ot_data_final['invoice_date'], format='%Y-%m-%d')
+    ot_data_final['invoice_date'] = pd.to_datetime(ot_data_final['invoice_date'])
 
     # load data to s3
     print("Loading data")
