@@ -15,7 +15,7 @@ Building an ETL pipeline that carries out the following tasks:
 ### Instructions on how to execute the code
 Copy the ``.env.example`` file to `.env` and fill out the environment vars.
 
-Make sure you are executing the code from the etl_pipeline folder. 
+Make sure you are executing the code from the etl_pipeline folder and you have Docker Desktop running.
 
 To run it locally first build the image.
 
@@ -23,7 +23,7 @@ To run it locally first build the image.
   docker image build -t etl-pipeline:0.1 .
 ```
 
-Then run the job:
+Then run the etl job using docker:
 ```bash
   docker run --env-file .env etl-pipeline:0.1
 ```
