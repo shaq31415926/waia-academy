@@ -10,7 +10,7 @@ Building an ETL pipeline that carries out the following tasks:
 ### Requirements
   The minimum requirements:
 - Docker for Mac: [Docker >= 20.10.2](https://docs.docker.com/docker-for-mac/install/)
-- Docker for Windows: [Docker](https://docs.docker.com/desktop/install/windows-install/) 
+- Docker for Windows: [Docker](https://docs.docker.com/desktop/install/windows-install/)
 
 ### Instructions on how to execute the code
 Copy the ``.env.example`` file to `.env` and fill out the environment vars.
