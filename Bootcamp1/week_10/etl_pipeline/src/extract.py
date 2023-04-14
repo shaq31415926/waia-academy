@@ -43,6 +43,6 @@ def extract_transactional_data(dbname, host, port, user, password):
 
     online_transactions_reduced = pd.read_sql(query, connect)
 
-    print(f"The table contains {online_transactions_reduced.shape[0]} invoices")
+    print(f"The data frame contains {online_transactions_reduced.shape[0]} invoices")
 
     return online_transactions_reduced
