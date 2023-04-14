@@ -2,7 +2,7 @@
 
 ### Introduction
 Building an ETL pipeline that carries out the following tasks:
-- Extracts transactional data of 400k invoices from a Redshift Database
+- Extracts transactional data of 400k invoices from Redshift
 - Transforms the data by identifying and removing duplicates
 - Transforms the invoice_date field by fixing the data type
 - Loads the transformed data to an s3 bucket
