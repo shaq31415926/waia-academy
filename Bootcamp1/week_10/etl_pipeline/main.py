@@ -39,7 +39,8 @@ def main():
     # load data to s3
     print("Loading data")
     aws_s3_bucket = "waia-data-dump"  # define the s3 bucket
-    key = "online_transactions_transformation/final/sh_online_transactions.csv"  # define the file name
+    dt = datetime.now().strftime("%Y%m%d_%H%M%S")
+    key = f"online_transactions_transformation/final/sh_online_transactions_{dt}.csv"  # define the file name
 
     df_to_s3(ot_data_final, key, aws_s3_bucket, aws_access_key_id, aws_secret_access_key_id)
 
