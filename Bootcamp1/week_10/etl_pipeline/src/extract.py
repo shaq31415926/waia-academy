@@ -1,19 +1,17 @@
-import psycopg2
+from sqlalchemy import create_engine
+from sqlalchemy import text
 import pandas as pd
 
 
 # connect to redshift
 
 def connect_to_redshift(dbname, host, port, user, password):
-    """Method that connects to redshift. This gives a warning so will look for another solution"""
 
-    connect = psycopg2.connect(
-        dbname=dbname, host=host, port=port, user=user, password=password
-    )
+    engine = create_engine(f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{dbname}")
 
     print("connection to redshift made")
 
-    return connect
+    return engine
 
 
 def extract_transactional_data(dbname, host, port, user, password):
@@ -41,7 +39,7 @@ def extract_transactional_data(dbname, host, port, user, password):
                     and t1.quantity > 0
                """
 
-    online_transactions_reduced = pd.read_sql(query, connect)
+    online_transactions_reduced = pd.read_sql(text(query), connect)
 
     print(f"The data frame contains {online_transactions_reduced.shape[0]} invoices")
 
