@@ -18,6 +18,7 @@ def calculations(num1, num2):
     return total
 
 total = calculations(num1, num2)
+
 if total == "ERROR":
     print("Operator not recognised")
 else:
