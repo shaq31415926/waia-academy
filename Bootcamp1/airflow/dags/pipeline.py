@@ -4,7 +4,7 @@ from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.python_operator import PythonOperator
 
-from src.main import main
+from src.extract_transform_load import main
 
 
 dag = DAG("etl-pipeline",

@@ -1,7 +1,7 @@
 from datetime import datetime
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
-from src.test import print_hello
+from src.print_hello import print_hello
 
 
 dag = DAG('hello_world', description='Hello World DAG',

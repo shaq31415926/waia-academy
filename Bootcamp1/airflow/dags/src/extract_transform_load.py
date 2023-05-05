@@ -17,7 +17,7 @@ aws_access_key_id = os.getenv("aws_access_key_id")
 aws_secret_access_key_id = os.getenv("aws_secret_access_key_id")
 
 
-def main():
+def extract_transform_load():
     start_time = datetime.now()
 
     # extract data
@@ -44,6 +44,6 @@ def main():
     execution_time = datetime.now() - start_time
     print(f"\nTotal execution time (hh:mm:ss.ms) {execution_time}")
 
-
+# leaving this here incase we want to run this as a script in future iterations.
 if __name__ == "__main__":
-    main()
+    extract_transform_load()
