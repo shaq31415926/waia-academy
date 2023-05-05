@@ -10,4 +10,5 @@ RUN pip3 install -r requirements.txt
 
 # copy dags to the dags folder in the image
 COPY dags/. dags/
+# copy the python scripts to the dags folder in the image
 COPY src dags/src/
