@@ -11,7 +11,7 @@ Copy the ``.env.example`` file to `.env` and fill out the environment vars.
 Make sure you are executing the code from the airflow folder and you have Docker Desktop running.
 
 
-1. Build a docker image with puckel/docker-airflow image
+1. Build a docker image with puckel/docker-airflow image. Information on this image can be found [here](https://github.com/puckel/docker-airflow)
 
 ```bash
   docker image build -t local-airflow .
