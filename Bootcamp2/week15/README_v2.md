@@ -20,10 +20,6 @@ Make sure you are executing the code from the etl_pipeline folder and you have D
 
 To run it locally first build the image.
 
-```
-  docker image build -t etl-pipeline:0.1 .
-```
-
 ```bash
   docker image build -t etl-pipeline:0.1 .
 ```
