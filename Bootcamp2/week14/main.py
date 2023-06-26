@@ -13,4 +13,5 @@ password = os.getenv("password")
 aws_access_key_id = os.getenv("aws_access_key_id")
 aws_secret_access_key_id = os.getenv("aws_secret_access_key_id")
 
+# make a connection to redshift
 connect_to_redshift(dbname, host, port, user, password)
