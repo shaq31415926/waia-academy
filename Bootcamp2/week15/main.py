@@ -4,9 +4,9 @@ from src.extract import extract_transactional_data
 from src.transform import identify_and_remove_duplicated_data
 from src.load_to_s3 import df_to_s3
 
-
-from dotenv import load_dotenv
-load_dotenv()  # only for local testing
+# only for running the code from command line
+# from dotenv import load_dotenv
+# load_dotenv()
 
 # import variables from .env file
 dbname = os.getenv("dbname")
