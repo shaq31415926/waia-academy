@@ -11,5 +11,18 @@ user_sign = user_sign.lower()
 # make a request to ohmanda for the user star sign
 horoscope_url = "https://ohmanda.com/api/horoscope/"
 
-# if you see response 200 that means you were able to make a connection to the ohmanda api for your users sign
-print(requests.get(url=horoscope_url + user_sign))
+try:
+    # code that gets the user sign from the horoscope api
+    # .json() wraps this into a dictionary so we can fetch the horoscope
+    horoscope_dict = requests.get(url=horoscope_url + user_sign).json()
+    horoscope = horoscope_dict["horoscope"]
+    print("Your horoscope is", horoscope)
+except:
+    print("Please double check your star sign")
+
+# print("--Don't do the next part!----")
+# the_date = pd.to_datetime(horoscope_dict["date"])
+# the_date = horoscope_dict["date"]
+# print the horoscope
+# print(f"Your horoscope for {the_date.strftime('%A')} is: {horoscope}")
+# print(f"Your horoscope for {the_date} is: {horoscope}")
