@@ -28,7 +28,7 @@ def df_to_s3(df, key, s3_bucket, aws_access_key_id, aws_secret_access_key):
     
     if file_type == '.csv':
         buffer = StringIO()  # create buffer to temporarily store the Data Frame
-        df.to_csv(buffer)  # code to write the data frame as .csv file
+        df.to_csv(buffer, index=False)  # code to write the data frame as .csv file
 
     s3_client = connect_to_s3(aws_access_key_id, aws_secret_access_key)
 
@@ -37,4 +37,4 @@ def df_to_s3(df, key, s3_bucket, aws_access_key_id, aws_secret_access_key):
     )  # this code writes the temp stored file and writes to s3
 
 
-    print(f"The transformed data is saved as CSV in the following location s3://{s3_bucket}/{key}")
+    print(f"The transformed data is saved as {file_type} in the following location s3://{s3_bucket}/{key}")
