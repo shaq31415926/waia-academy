@@ -12,17 +12,18 @@ Building an ETL pipeline that carries out the following tasks:
   The minimum requirements:
 - Python 3+
 
-I executed this code with Python 3.11 and the libraries versions are listed in the requirements file.
+I executed this code with Python 3.11 and the libraries versions are listed in the [requirements file](https://github.com/shaq31415926/waia-academy/blob/main/Bootcamp3/week9/requirements.txt).
 
 ### Instructions on how to execute the code
-Make sure you are executing the code from the week9 folder.
-1. Install all the libraries you will need to execute main.py. 
+Make sure you are executing the code from the same location as the `main.py` script.
+
+1. Install all the libraries you will need to execute `main.py`. 
 
 ```
   pip3 install -r requirements.txt
 ```
 
-2. Copy the `.env.example` file to `.env` and fill out the environment vars.
+2. Copy the `.env.example` file to `.env` and fill out the environment variables.
 
 3. Run the main.py script, which carries out the extraction-transformation and load tasks.
 
