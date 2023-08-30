@@ -1,4 +1,4 @@
-def identify_and_remove_duplicated_data(df):
+def identify_and_remove_duplicate_data(df):
     """Method that removes identifies and removes duplicates"""
 
     if df.duplicated().sum() > 0:
