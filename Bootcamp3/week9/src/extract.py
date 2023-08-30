@@ -22,7 +22,6 @@ def extract_transactional_data(dbname, host, port, user, password):
     3. Adds description to the online transactions table
     4. Replaces missing stock description with Unknown
     5. Fixes the data type of invoice date
-    6. Create a new variable called total order value
     """
 
     # connect to redshift
