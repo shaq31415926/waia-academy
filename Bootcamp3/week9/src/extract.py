@@ -36,8 +36,6 @@ def extract_transactional_data(dbname, host, port, user, password):
       CASE WHEN s.description IS NULL THEN 'Unknown' ELSE s.description END AS description, 
       ot.price, 
       ot.quantity, 
-      /*add a variable that gives the total order value*/
-      ot.price * ot.quantity as total_order_value, 
       CAST(invoice_date As DateTime) AS invoice_date, 
       ot.customer_id, 
       ot.country 
