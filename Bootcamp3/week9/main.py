@@ -26,6 +26,8 @@ online_trans_cleaned = extract_transactional_data(dbname, host, port, user, pass
 print("Identifying and removing duplicates...")
 online_trans_cleaned = identify_and_remove_duplicate_data(online_trans_cleaned)
 
+# add another step to remove outliers
+
 # loading the data to s3
 print("Loading data to the s3 bucket...")
 s3_bucket = "july-bootcamp"
