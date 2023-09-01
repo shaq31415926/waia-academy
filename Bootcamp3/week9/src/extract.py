@@ -37,7 +37,8 @@ def extract_transactional_data(dbname, host, port, user, password):
       ot.quantity, 
       CAST(invoice_date As DateTime) AS invoice_date, 
       ot.customer_id, 
-      ot.country 
+      ot.country,
+      ot.price * ot.quantity as total_order_value
     FROM 
       bootcamp.online_transactions ot 
       /* this is a subquery that removes '?' from the stock_description table */

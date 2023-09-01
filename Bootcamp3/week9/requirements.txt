@@ -1,4 +1,3 @@
 psycopg2-binary==2.9.6
 pandas==2.0.0
 boto3==1.26.113
-python-dotenv==1.0.0

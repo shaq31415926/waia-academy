@@ -1,4 +1,4 @@
-## ETL Pipeline v1
+## ETL Pipeline v2
 
 ### Introduction
 Building an ETL pipeline that carries out the following tasks:
@@ -10,23 +10,23 @@ Building an ETL pipeline that carries out the following tasks:
 
 ### Requirements
   The minimum requirements:
-- Python 3+
-
-I executed this code with Python 3.11 and the libraries versions are listed in the [requirements file](https://github.com/shaq31415926/waia-academy/blob/main/Bootcamp3/week9/requirements.txt).
+- Docker for Mac: [Docker >= 20.10.2](https://docs.docker.com/docker-for-mac/install/)
+- Docker for Windows: 
+  - Installation: [Docker](https://docs.docker.com/desktop/install/windows-install/)
+  - Manual installation steps for older WSL version: [Docker WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package)
 
 ### Instructions on how to execute the code
-Make sure you are executing the code from the same location as the `main.py` script.
+- Copy the `.env.example` file to `.env` and fill out the environment vars.
 
-1. Install all the libraries you will need to execute `main.py`. 
+- Make sure you are executing the code from the folder where you have your Dockerfile and python scripts and you have Docker Desktop running.
 
+To run it locally first build the image.
+
+```bash
+  docker image build -t etl .
 ```
-  pip3 install -r requirements.txt
-```
 
-2. Copy the `.env.example` file to `.env` and fill out the environment variables.
-
-3. Run the main.py script, which carries out the extraction-transformation and load tasks.
-
-```
-  python3 main.py
+Then run the etl job using docker:
+```bash
+  docker run --env-file .env etl
 ```
